@@ -2,7 +2,7 @@ from base64 import urlsafe_b64decode, urlsafe_b64encode
 from typing import Union
 from uuid import UUID, uuid4
 
-__all__ = ['b64sid_to_uuid', 'uuid_to_b64sid', 'B64Uuid']
+__all__ = ['b64sid_to_uuid', 'uuid_to_b64sid', 'B64UUID']
 
 
 def b64sid_to_uuid(s: str) -> UUID:
@@ -10,10 +10,10 @@ def b64sid_to_uuid(s: str) -> UUID:
 
 
 def uuid_to_b64sid(value: UUID) -> str:
-    return B64Uuid(value).string
+    return B64UUID(value).string
 
 
-class B64Uuid:
+class B64UUID:
     def __init__(self, initial: Union[None, UUID, str, bytes, int] = None):
         if initial is None:
             self._uuid = uuid4()
