@@ -44,32 +44,32 @@ class B64UUID:
             self.__class__.__qualname__, id(self), self._string
         )
 
-    def __lt__(self, other) -> bool:
+    def __lt__(self, other):
         if isinstance(other, UUID):
             return self.uuid < other
         return self.uuid < other.uuid
 
-    def __le__(self, other) -> bool:
+    def __le__(self, other):
         if isinstance(other, UUID):
             return self.uuid <= other
         return self.uuid <= other.uuid
 
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other):
         if isinstance(other, UUID):
             return self.uuid == other
         return self.uuid == other.uuid
 
-    def __ne__(self, other) -> bool:
+    def __ne__(self, other):
         if isinstance(other, UUID):
             return self.uuid != other
         return self.uuid != other.uuid
 
-    def __gt__(self, other) -> bool:
+    def __gt__(self, other):
         if isinstance(other, UUID):
             return self.uuid > other
         return self.uuid > other.uuid
 
-    def __ge__(self, other) -> bool:
+    def __ge__(self, other):
         if isinstance(other, UUID):
             return self.uuid >= other
         return self.uuid >= other.uuid
