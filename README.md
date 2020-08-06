@@ -3,7 +3,7 @@
 ---
 
 [![pytest](https://github.com/tanbro/b64uuid/workflows/pytest/badge.svg)](https://github.com/tanbro/b64uuid/actions?query=workflow%3Apytest)
-[![PyPI](https://img.shields.io/pypi/v/b64uuid.svg)](https://pypi.org/project/b64uuid/)
+[![PyPI](https://img.shields.io/pypi/v/b64uuid.svg)](https://pypi.org/project/b64uuid)
 
 ---
 
@@ -19,12 +19,12 @@ We can use it to make UUID string a little shorter.
   pip install b64uuid
   ```
 
-- Install from source :
+- Install from source:
 
   Clone or download whole project, enter the project's root directory, then
 
   ```bash
-  pip install -e .
+  pip install .
   ```
 
   or
@@ -33,7 +33,7 @@ We can use it to make UUID string a little shorter.
   python setup.py install
   ```
 
-Check <https://packaging.python.org/tutorials/installing-packages/> for more details.
+Check <https://packaging.python.org/tutorials/installing-packages> for more details.
 
 ## Command Line Usage
 
@@ -46,14 +46,14 @@ Check <https://packaging.python.org/tutorials/installing-packages/> for more det
 
 - Short ID from UUID
 
-  ```bash
+  ```sh
   $ b64uuid -u 2863a16d-b6ae-45a2-9d74-98d20377d56a
   KGOhbbauRaKddJjSA3fVag
   ```
 
 - Short ID to UUID
 
-  ```bash
+  ```sh
   $ b64uuid -s KGOhbbauRaKddJjSA3fVag
   2863a16d-b6ae-45a2-9d74-98d20377d56a
   ```
