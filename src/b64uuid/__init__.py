@@ -1,1 +1,1 @@
-from .b64uuid import *
+from .b64uuid import *  # noqa

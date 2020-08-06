@@ -9,7 +9,7 @@ def b64sid_to_uuid(s: str) -> UUID:
     return UUID(bytes=urlsafe_b64decode(s.rstrip('=') + '=='))
 
 
-def uuid_to_b64sid(value: UUID)-> str:
+def uuid_to_b64sid(value: UUID) -> str:
     return B64Uuid(value).string
 
 

@@ -1,0 +1,23 @@
+[flake8]
+exclude =
+    .git,
+    .eggs,
+    .pytest_cache,
+    __pycache__,
+    docs,
+    tests,
+    build,
+    dist,
+    data,
+    log,
+    logs,
+    .env,
+    venv,
+    env,
+    .vscode
+max-line-length = 120
+max-complexity = 10
+
+[pycodestyle]
+max_line_length = 120
+ignore = E501
