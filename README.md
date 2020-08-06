@@ -96,5 +96,5 @@ Check <https://packaging.python.org/tutorials/installing-packages/> for more det
   >>> short_id
   'lTJ0FteUEeqWGRy3LN4_fw'
   >>> B64UUID(short_id).uuid.hex
-  '95327416d79411ea96191cb72cde3f7f
+  '95327416d79411ea96191cb72cde3f7f'
   ```
