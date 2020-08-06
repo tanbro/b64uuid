@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/liuxy/work/personal/b64uuid/venv/bin/python3",
+    "python.pythonPath": "venv/bin/python",
     "python.testing.unittestArgs": [
         "-v",
         "-s",
