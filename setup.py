@@ -15,7 +15,7 @@ def read_requires_file(file_name):
 
 setup(
     name='b64uuid',
-    description='A small library and tool to encode/decode a python UUID object to/from a 22 characters length url safe base64 string.',
+    description='A small library and tool to encode/decode a python UUID object to/from a 22 characters length url safe base64 string.',  # noqa
     url='https://github.com/tanbro/b64uuid',
     author='liu xue yan',
     author_email='liu_xue_yan@foxmail.com',
