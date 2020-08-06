@@ -29,7 +29,11 @@ class B64Uuid:
         elif isinstance(initial, int):
             self._uuid = UUID(int=initial)
         else:
-            raise TypeError(f'Can not initial from {type(initial)} to {UUID}')
+            raise TypeError(
+                'Can not convert initial value from type {} to {}'.format(
+                    type(initial), UUID
+                )
+            )
         self._string = urlsafe_b64encode(self._uuid.bytes).rstrip(b'=').decode('ascii')
 
     def __str__(self):
