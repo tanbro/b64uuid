@@ -1,10 +1,42 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+Generate a base64 encoded URL safe UUID
+"""
+
+from argparse import ArgumentParser
+
 from .b64uuid import B64Uuid
 
 
+def get_args():
+    parser = ArgumentParser(prog='b64uuid', description=__doc__)
+    parser.add_argument(
+        '--uuid', '-u', type=str,
+        help='Generate short ID from the UUID hex string'
+             'Can not be used together with "--short-id".'
+             '(default=%(default)s)'
+    )
+    parser.add_argument(
+        '--short-id', '-s', type=str,
+        help='Reversely convert short ID to UUID. '
+             'Can not be used together with "--uuid".'
+             '(default=%(default)s)'
+    )
+    return parser.parse_args()
+
+
 def main():
-    s = B64Uuid()
-    print(s)
+    args = get_args()
+
+    if args.uuid:
+        print(B64Uuid(args.uuid).string)
+    elif args.short_id:
+        print(str(B64Uuid(args.short_id).uuid))
+    else:
+        print(B64Uuid().string)
 
 
 if __name__ == '__main__':
-    exit(main())
+    main()
