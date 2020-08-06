@@ -7,7 +7,7 @@
 
 ---
 
-A small library and tool to encode/decode a python UUID object to/from a 22 characters shorter URL safe base64 string.
+A small Python library and command-line tool to encode/decode UUID to/from a 22 characters shorter URL safe base64 string.
 
 We can use it to make UUID string a little shorter.
 
@@ -98,9 +98,3 @@ Check <https://packaging.python.org/tutorials/installing-packages/> for more det
   >>> B64UUID(short_id).uuid.hex
   '95327416d79411ea96191cb72cde3f7f
   ```
-
----
-
-[pypi]: https://pypi.org/ "PyPI is the default Package Index for the Python community."
-
----
