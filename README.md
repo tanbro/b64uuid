@@ -3,6 +3,7 @@
 ---
 
 [![pytest](https://github.com/tanbro/b64uuid/workflows/pytest/badge.svg)](https://github.com/tanbro/b64uuid/actions?query=workflow%3Apytest)
+[![PyPI](https://img.shields.io/pypi/v/b64uuid.svg)](https://pypi.org/project/b64uuid/)
 
 ---
 
