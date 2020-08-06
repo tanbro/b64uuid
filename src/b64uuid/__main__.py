@@ -1,13 +1,10 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """
 Generate a base64 encoded URL safe UUID
 """
 
 from argparse import ArgumentParser
 
-from .b64uuid import B64Uuid
+from .b64uuid import B64UUID
 
 
 def get_args():
@@ -31,11 +28,11 @@ def main():
     args = get_args()
 
     if args.uuid:
-        print(B64Uuid(args.uuid).string)
+        print(B64UUID(args.uuid).string)
     elif args.short_id:
-        print(str(B64Uuid(args.short_id).uuid))
+        print(str(B64UUID(args.short_id).uuid))
     else:
-        print(B64Uuid().string)
+        print(B64UUID().string)
 
 
 if __name__ == '__main__':

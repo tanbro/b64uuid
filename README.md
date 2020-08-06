@@ -63,12 +63,12 @@ Check <https://packaging.python.org/tutorials/installing-packages/> for more det
 
   ```python
   >>> from uuid import uuid1
-  >>> from b64uuid import B64Uuid
+  >>> from b64uuid import B64UUID
   >>>
   >>> uid = uuid1()
   >>> str(uid)
   'cb6e319c-d793-11ea-9619-1cb72cde3f7f'
-  >>> bid = B64Uuid(uid)
+  >>> bid = B64UUID(uid)
   >>> str(bid)
   'y24xnNeTEeqWGRy3LN4_fw'
   ```
@@ -76,9 +76,9 @@ Check <https://packaging.python.org/tutorials/installing-packages/> for more det
 - Generate a new short ID
 
   ```python
-  >>> from b64uuid import B64Uuid
+  >>> from b64uuid import B64UUID
   >>>
-  >>> B64Uuid().string
+  >>> B64UUID().string
   'Ft018l4aTwalxqDHMQoqTQ'
   ```
 
@@ -86,15 +86,15 @@ Check <https://packaging.python.org/tutorials/installing-packages/> for more det
 
   ```python
   >>> from uuid import uuid1
-  >>> from b64uuid import B64Uuid
+  >>> from b64uuid import B64UUID
   >>>
   >>> uid = uuid1()
   >>> uid.hex
   '95327416d79411ea96191cb72cde3f7f'
-  >>> short_id = B64Uuid(uid).string
+  >>> short_id = B64UUID(uid).string
   >>> short_id
   'lTJ0FteUEeqWGRy3LN4_fw'
-  >>> B64Uuid(short_id).uuid.hex
+  >>> B64UUID(short_id).uuid.hex
   '95327416d79411ea96191cb72cde3f7f
   ```
 
