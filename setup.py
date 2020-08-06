@@ -15,7 +15,8 @@ def read_requires_file(file_name):
 
 setup(
     name='b64uuid',
-    description='A small library and tool to encode/decode a python UUID object to/from a 22 characters length url safe base64 string.',  # noqa
+    license='AGPLv3+',
+    description='A small library and tool to encode/decode a python UUID object to/from a 22 characters shorter URL safe base64 string.',  # noqa
     url='https://github.com/tanbro/b64uuid',
     author='liu xue yan',
     author_email='liu_xue_yan@foxmail.com',
@@ -24,6 +25,7 @@ setup(
         for file in ('README.md', 'CONTRIBUTING.md', 'CHANGELOG.md', 'AUTHORS.md')
     ),
     long_description_content_type='text/markdown',
+    keywords='uuid base64 shortid urlsafe urlsafe-base64',
 
     packages=find_packages('src'),
     package_dir={'': 'src'},
@@ -46,4 +48,12 @@ setup(
             'b64uuid = b64uuid.__main__:main',
         ],
     },
+
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
+        'Programming Language :: Python :: 3',
+        'Topic :: Utilities',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
 )
