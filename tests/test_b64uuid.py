@@ -4,7 +4,7 @@ from unittest.case import TestCase
 from urllib.parse import quote
 from uuid import uuid1, uuid4
 
-from b64uuid import B64UUID, b64sid_to_uuid, uuid_to_b64sid
+from b64uuid import B64UUID, b64id_to_uuid, uuid_to_b64id
 
 
 class B64UuidTestCase(TestCase):
@@ -50,7 +50,7 @@ class StrToUuidTestCase(TestCase):
         uuid_list = [choice([uuid1(), uuid4()]) for _ in range(size)]
         b64str_list = [B64UUID(m).string for m in uuid_list]
         for uid, s in zip(uuid_list, b64str_list):
-            uid1 = b64sid_to_uuid(s)
+            uid1 = b64id_to_uuid(s)
             self.assertEqual(uid, uid1)
 
 
@@ -60,5 +60,5 @@ class UuidToStrTestCase(TestCase):
         uuid_list = [choice([uuid1(), uuid4()]) for _ in range(size)]
         b64id_list = [B64UUID(m) for m in uuid_list]
         for uid, bid in zip(uuid_list, b64id_list):
-            sid = uuid_to_b64sid(uid)
+            sid = uuid_to_b64id(uid)
             self.assertEqual(sid, bid.string)

@@ -2,14 +2,14 @@ from base64 import urlsafe_b64decode, urlsafe_b64encode
 from typing import Union
 from uuid import UUID, uuid4
 
-__all__ = ['b64sid_to_uuid', 'uuid_to_b64sid', 'B64UUID']
+__all__ = ['b64id_to_uuid', 'uuid_to_b64id', 'B64UUID']
 
 
-def b64sid_to_uuid(s: str) -> UUID:
+def b64id_to_uuid(s: str) -> UUID:
     return UUID(bytes=urlsafe_b64decode(s.rstrip('=') + '=='))
 
 
-def uuid_to_b64sid(value: UUID) -> str:
+def uuid_to_b64id(value: UUID) -> str:
     return B64UUID(value).string
 
 
@@ -21,7 +21,7 @@ class B64UUID:
             self._uuid = initial
         elif isinstance(initial, str):
             if len(initial) < 32:
-                self._uuid = b64sid_to_uuid(initial)
+                self._uuid = b64id_to_uuid(initial)
             else:
                 self._uuid = UUID(hex=initial)
         elif isinstance(initial, bytes):
