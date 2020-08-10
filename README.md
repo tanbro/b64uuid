@@ -4,6 +4,7 @@
 
 [![pytest](https://github.com/tanbro/b64uuid/workflows/pytest/badge.svg)](https://github.com/tanbro/b64uuid/actions?query=workflow%3Apytest)
 [![PyPI](https://img.shields.io/pypi/v/b64uuid.svg)](https://pypi.org/project/b64uuid)
+[![Documentation Status](https://readthedocs.org/projects/b64uuid/badge/?version=latest)](https://b64uuid.readthedocs.io/en/latest/?badge=latest)
 
 ---
 
