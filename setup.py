@@ -18,6 +18,10 @@ setup(
     license='AGPLv3+',
     description='A small Python library and command-line tool to encode/decode UUID to/from a 22 characters shorter URL safe base64 string.',  # noqa
     url='https://github.com/tanbro/b64uuid',
+    project_urls={
+        "Documentation": "https://b64uuid.readthedocs.io/",
+        "Source Code": "https://github.com/tanbro/b64uuid/",
+    },
     author='liu xue yan',
     author_email='liu_xue_yan@foxmail.com',
     long_description=('{0}---{0}'.format(os.linesep * 2)).join(
