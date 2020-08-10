@@ -14,5 +14,6 @@
         "tests"
     ],
     "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true
+    "python.linting.flake8Enabled": true,
+    "restructuredtext.confPath": "${workspaceFolder}/docs"
 }
