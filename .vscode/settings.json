@@ -15,5 +15,6 @@
     ],
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
-    "restructuredtext.confPath": "${workspaceFolder}/docs"
+    "restructuredtext.confPath": "${workspaceFolder}/docs",
+    "cmake.configureOnOpen": false
 }
