@@ -14,15 +14,13 @@ We can use it to make UUID string a little shorter.
 
 ## Installation
 
-- Install from PyPI:
+- Installing from [PyPI](https://pypi.org/):
 
   ```bash
   pip install b64uuid
   ```
 
-- Install from source:
-
-  Clone or download whole project, enter the project's root directory, then
+- Installing from a local src tree:
 
   ```bash
   pip install .
@@ -36,7 +34,7 @@ We can use it to make UUID string a little shorter.
 
 Check <https://packaging.python.org/tutorials/installing-packages> for more details.
 
-## Command Line Usage
+## Command Line Usages
 
 - Make a random short ID
 
@@ -59,9 +57,18 @@ Check <https://packaging.python.org/tutorials/installing-packages> for more deta
   2863a16d-b6ae-45a2-9d74-98d20377d56a
   ```
 
-## Library Usage
+## Library Usages
 
-- Shorten UUID string
+- Make a random short ID
+
+  ```python
+  >>> from b64uuid import B64UUID
+  >>>
+  >>> B64UUID().string
+  'Ft018l4aTwalxqDHMQoqTQ'
+  ```
+
+- Short ID from UUID
 
   ```python
   >>> from uuid import uuid1
@@ -75,16 +82,7 @@ Check <https://packaging.python.org/tutorials/installing-packages> for more deta
   'y24xnNeTEeqWGRy3LN4_fw'
   ```
 
-- Generate a new short ID
-
-  ```python
-  >>> from b64uuid import B64UUID
-  >>>
-  >>> B64UUID().string
-  'Ft018l4aTwalxqDHMQoqTQ'
-  ```
-
-- Restore UUID from short ID
+- Short ID to UUID
 
   ```python
   >>> from uuid import uuid1
