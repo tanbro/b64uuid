@@ -79,7 +79,8 @@ class B64UUID:
                     type(initial), UUID
                 )
             )
-        self._string = urlsafe_b64encode(self._uuid.bytes).rstrip(b'=').decode('ascii')
+        self._string = urlsafe_b64encode(
+            self._uuid.bytes).rstrip(b'=').decode('ascii')
 
     def __str__(self):
         return self._string
@@ -89,32 +90,32 @@ class B64UUID:
             self.__class__.__qualname__, id(self), self._string
         )
 
-    def __lt__(self, other):
+    def __lt__(self, other):  # type: (Union[UUID, B64UUID])->bool
         if isinstance(other, UUID):
             return self.uuid < other
         return self.uuid < other.uuid
 
-    def __le__(self, other):
+    def __le__(self, other):  # type: (Union[UUID, B64UUID])->bool
         if isinstance(other, UUID):
             return self.uuid <= other
         return self.uuid <= other.uuid
 
-    def __eq__(self, other):
+    def __eq__(self, other):  # type: (Union[UUID, B64UUID])->bool
         if isinstance(other, UUID):
             return self.uuid == other
         return self.uuid == other.uuid
 
-    def __ne__(self, other):
+    def __ne__(self, other):  # type: (Union[UUID, B64UUID])->bool
         if isinstance(other, UUID):
             return self.uuid != other
         return self.uuid != other.uuid
 
-    def __gt__(self, other):
+    def __gt__(self, other):  # type: (Union[UUID, B64UUID])->bool
         if isinstance(other, UUID):
             return self.uuid > other
         return self.uuid > other.uuid
 
-    def __ge__(self, other):
+    def __ge__(self, other):  # type: (Union[UUID, B64UUID])->bool
         if isinstance(other, UUID):
             return self.uuid >= other
         return self.uuid >= other.uuid
